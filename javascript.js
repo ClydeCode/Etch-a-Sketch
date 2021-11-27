@@ -39,3 +39,7 @@ items.forEach(item => {
     });
 });
 
+const button = document.querySelector('.reset');
+
+button.addEventListener('click', clearBoard);
+

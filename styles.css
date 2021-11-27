@@ -1,15 +1,59 @@
 body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    background: cadetblue;
+    background: url(images/cosmo.jpg);
+    background-size: 1900px;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    margin: 100px auto;
+    margin: 100px auto 20px;
     width: 400px;
     height: 400px;
     border: 2px brown solid;
     background: white;
+}
+
+.reset {
+    align-self: center;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #6f10ec;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 12px #999;
+}
+
+.reset:hover {background-color: #a000bd}
+
+.reset:active {
+  background-color: #a000bd;
+  box-shadow: 0 5px #666;
+  transform: translateY(6px);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    height: 80px;
+    background-color: #0f0024;
+    opacity: 0.8;
+}
+
+.footer .content {
+    color: white;
+}
+
+.footer .content a {
+    color: inherit;
 }
