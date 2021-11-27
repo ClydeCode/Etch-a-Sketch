@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: cadetblue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    width: 400px;
+    height: 400px;
+    border: 2px brown solid;
+    background: white;
+}
