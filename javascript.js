@@ -1,8 +1,12 @@
 function createGrid(dimensions) {
+    while(container.firstChild)
+        container.removeChild(container.firstChild);
+
     for (let i = 0; i < dimensions; i++) {
         const col = document.createElement('div');
 
         col.style.cssText = 'display: flex; flex: 1 0 0';
+        col.classList.add('columns');
 
         container.appendChild(col);
 
@@ -15,6 +19,26 @@ function createGrid(dimensions) {
             col.appendChild(item);
         }
     }
+    addListeners();
+}
+
+function addListeners() {
+    items = document.querySelectorAll('.items');
+
+    items.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.style.background = randomColor();
+        });
+    });
+}
+
+function inputValue() {
+    let value = prompt('Input value between 1 - 100: ');
+
+    if (value >= 1 && value <= 100)
+        return value;
+    else 
+        alert('Wrong value!');
 }
 
 function clearBoard() {
@@ -27,19 +51,18 @@ function randomColor() {
     return '#' + (Math.floor(Math.random()*16777215).toString(16));
 }
 
+var items = document.querySelectorAll('.items');
+
 const container = document.querySelector('.container');
 
-createGrid(15);
+const buttonReset = document.querySelector('.reset');
 
-const items = document.querySelectorAll('.items');
+buttonReset.addEventListener('click', clearBoard);
 
-items.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.style.background = randomColor();
-    });
+const buttonGrid = document.querySelector('.grid');
+
+buttonGrid.addEventListener('click', () => {
+    createGrid(inputValue());
 });
 
-const button = document.querySelector('.reset');
-
-button.addEventListener('click', clearBoard);
-
+createGrid(2);
