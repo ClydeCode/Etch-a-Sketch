@@ -8,18 +8,29 @@ body {
     background-size: 1900px;
 }
 
+.title {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 80px;
+    color: #a000bd;
+    margin-top: 20px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
-    margin: 100px auto 20px;
+    margin: 70px auto 20px;
     width: 400px;
     height: 400px;
     border: 2px brown solid;
     background: white;
 }
 
-.reset {
+.buttons {
     align-self: center;
+}
+
+.buttons .reset, .grid {
     padding: 15px 25px;
     font-size: 24px;
     text-align: center;
@@ -30,11 +41,13 @@ body {
     border: none;
     border-radius: 15px;
     box-shadow: 0 12px #999;
+    margin: auto 7px;;
+    width: 130px;
 }
 
-.reset:hover {background-color: #a000bd}
+.reset:hover, .grid:hover {background-color: #a000bd}
 
-.reset:active {
+.reset:active, .grid:active {
   background-color: #a000bd;
   box-shadow: 0 5px #666;
   transform: translateY(6px);
